@@ -1,15 +1,12 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import CheckboxWithLabel from '../app/components/App';
+import App from '../app/components/App';
 
-it('CheckboxWithLabel changes the text after click', () => {
-  // Render a checkbox with label in the document
+it('App render with a default text', () => {
   const checkbox = shallow(
-      <CheckboxWithLabel />
+      <App />
   );
 
   const homepage = checkbox.find(".brunch-homepage");
-
   expect(homepage.text()).toEqual('Brunch homepage');
-
 });
